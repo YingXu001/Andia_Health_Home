@@ -1,0 +1,28 @@
+{
+  "name": "andia_health_home",
+  "version": "1.0.0",
+  "description": "A static site ready for GitHub Pages.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YingXu001/Andia_Health_Home.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YingXu001/Andia_Health_Home/issues"
+  },
+  "homepage": "https://github.com/YingXu001/Andia_Health_Home#readme",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.0.4",
+    "vite": "^7.1.10"
+  }
+}
