@@ -70,12 +70,6 @@ export default function App() {
           </p>
         </Section>
 
-        <Section id="visitors" title="Visitors">
-          <p>A snapshot of where visitors are discovering Andia Health.</p>
-          <VisitorMap />
-        </Section>
-
-
       </main>
 
       <Footer />
