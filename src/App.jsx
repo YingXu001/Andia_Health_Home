@@ -3,7 +3,6 @@ import Hero from './components/Hero'
 import Section from './components/Section'
 import Card from './components/Card'
 import Footer from './components/Footer'
-import VisitorMap from './components/VisitorMap'
 
 export default function App() {
   return (
