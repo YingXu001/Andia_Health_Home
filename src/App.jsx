@@ -52,12 +52,11 @@ export default function App() {
 
         <Section id="team" title="Team">
           <p>
-            We bring together expertise in computational biology, neuroscience, and software engineering.
-            (Replace with your core team and advisors.)
+            We bring together expertise in computational biology, neuroscience, software engineering, and artifical intelligence.
           </p>
           <ul className="list">
-            <li>CEO / Scientific Lead — Dr. Carlos Cruchaga</li>
-            <li>CIO / Head of AI — Fiona Xu</li>
+            <li>CEO & Scientific Lead — Dr. Carlos Cruchaga</li>
+            <li>CSO & Head of AI — Fiona Xu</li>
             {/* <li>Clinical Advisor — Dr. Carlos Cruchaga</li> */}
           </ul>
         </Section>

@@ -2,7 +2,7 @@
 
 A static site ready for GitHub Pages.
 
-## Local development
+<!-- ## Local development
 ```bash
 npm install
 npm run dev
@@ -22,4 +22,4 @@ andiaomics.com
 andiaomix.com 
 andiapm.ai 
 andiapm.com 
-andiaproteomics.com 
+andiaproteomics.com  -->
