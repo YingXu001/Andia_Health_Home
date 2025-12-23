@@ -97,3 +97,25 @@ a:hover{ text-decoration:underline }
   padding:28px 16px;text-align:center;color:var(--muted)
 }
 .footer .meta{margin:6px 0 0}
+
+.citation-hover {
+  position: relative;
+  cursor: pointer;
+}
+
+.citation-hover .tooltip {
+  display: none;
+  position: absolute;
+  background: #222;
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  width: 260px;
+  top: 1.5em;
+  left: 0;
+  z-index: 10;
+}
+
+.citation-hover:hover .tooltip {
+  display: block;
+}

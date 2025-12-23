@@ -25,7 +25,7 @@ export default function App() {
             <Card title="Explainable AI">
               Robust learning and causal reasoning to improve generalization and interpretability for research and clinical use. Our current agent AI and platform have been implemented in proteomic data to identify a protein panel that can quantify brain co-pathologies across the four major neurodegenerative diseases (Alzheimer’s, Parkinson's, Frontotemporal Dementia (FTD), and Dementia with Lewy bodies (DLB)) <Citation id={1} />
             </Card>
-            <Card title="Validation by Design">
+            <Card title="Target identification/Causal inference">
               Proprietary pipelines that integrate quantitative omics data with genetics with Mendelian Randomization, colocalization and LLMs to identify causal targets and for drug repositioning.
             </Card>
           </div>
