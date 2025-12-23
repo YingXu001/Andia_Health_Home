@@ -10,7 +10,9 @@ export default function Nav() {
       <nav>
         <a href="#about">About</a>
         <a href="#technology">Technology</a>
+        <a href="#science">Science</a>
         <a href="#solutions">Solutions</a>
+        <a href="#roadmap">Roadmap</a>
         <a href="#team">Team</a>
         <a href="#contact">Contact</a>
       </nav>
