@@ -23,7 +23,7 @@ export default function App() {
               Cross-layer integration across genomics, transcriptomics, proteomics, metabolomics, across tissues and platforms with clinical phenotypes. Our science is built on the largest proteomic, metabolomics and transcriptomics datasets.
             </Card>
             <Card title="Explainable AI">
-              Robust learning and causal reasoning to improve generalization and interpretability for research and clinical use. Our current agent AI and platform have been implemented in proteomic data to identify a protein panel that can quantify brain co-pathologies across the four major neurodegenerative diseases (Alzheimer’s, Parkinson's, Frontotemporal Dementia (FTD), and Dementia with Lewy bodies (DLB)) <Citation id={1} />
+              Robust learning and causal reasoning to improve generalization and interpretability for research and clinical use. Our current agent AI and platform have been implemented in proteomic data to identify a protein panel that can quantify brain co-pathologies across the four major neurodegenerative diseases (Alzheimer’s, Parkinson's, Frontotemporal Dementia, and Dementia with Lewy bodies)<Citation id={1} />
             </Card>
             <Card title="Target identification/Causal inference">
               Proprietary pipelines that integrate quantitative omics data with genetics with Mendelian Randomization, colocalization and LLMs to identify causal targets and for drug repositioning.
