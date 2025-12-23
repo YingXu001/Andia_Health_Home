@@ -40,8 +40,8 @@ export default function MultiOmicsTable() {
               alt="Brain tissue"
               className="mo2IconImg"
               loading="lazy"
-              width="26"
-              height="26"
+            //   width="26"
+            //   height="26"
             />
           </div>
 
@@ -52,8 +52,8 @@ export default function MultiOmicsTable() {
               alt="Cerebrospinal fluid"
               className="mo2IconImg"
               loading="lazy"
-              width="26"
-              height="26"
+            //   width="26"
+            //   height="26"
             />
           </div>
 
@@ -64,8 +64,8 @@ export default function MultiOmicsTable() {
               alt="Blood plasma"
               className="mo2IconImg"
               loading="lazy"
-              width="26"
-              height="26"
+            //   width="26"
+            //   height="26"
             />
           </div>
         </div>

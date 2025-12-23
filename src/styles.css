@@ -512,8 +512,8 @@ a:focus-visible{
 
 /* Image-based tissue icons (Brain / CSF / Blood) */
 .mo2IconImg{
-  width: 26px;
-  height: 26px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
   margin-top: 2px;
 
