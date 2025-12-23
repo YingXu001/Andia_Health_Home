@@ -77,7 +77,7 @@ export default function App() {
             validated in over 40,000 samples from the Global Neurodegeneration Proteomics Consortium and UK
             Biobank and shows that it can accurately identify individuals with Alzheimer’s disease,
             Parkinson’s disease, FTD, or DLB even before clinical symptoms
-            <Citation id={5} />.
+            <Citation id={1} />.
           </p>
         </Section>
 
@@ -97,15 +97,28 @@ export default function App() {
             and artificial intelligence.
           </p>
           <ul className="list">
-            <li>CEO & Scientific Lead — Dr. Carlos Cruchaga</li>
-            <li>CSO & Head of AI — Fiona Xu</li>
+            <li>
+              CEO & Scientific Lead — Dr. Carlos Cruchaga  
+              <span style={{ opacity: 0.75 }}> (research collaborations & partnerships)</span>
+            </li>
+            <li>
+              CSO & Head of AI — Fiona (Ying) Xu  
+              <span style={{ opacity: 0.75 }}> (AI, modeling, and technology)</span>
+            </li>
           </ul>
         </Section>
 
         <Section id="contact" title="Contact">
-          <p>We welcome research and business partnerships.</p>
           <p>
-            Email: <a href="mailto:cruchagac@wustl.edu">cruchagac@wustl.edu</a>
+            For research collaborations and business partnerships, please contact Dr. Carlos Cruchaga.
+            For technical and AI-related inquiries, please contact Fiona (Ying) Xu.
+          </p>
+          <p>
+            Carlos Cruchaga:{" "}
+            <a href="mailto:cruchagac@wustl.edu">cruchagac@wustl.edu</a>
+            <br />
+            Fiona (Ying) Xu:{" "}
+            <a href="mailto:x.ying1@wustl.edu">x.ying1@wustl.edu</a>
             <br />
             Location: Global / Remote
           </p>
