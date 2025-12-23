@@ -393,7 +393,6 @@ a:focus-visible{
 }
 
 
-
 /* ---------------------------------------
    Scientific table-style summary
    - Preserves the original grid alignment
@@ -403,27 +402,23 @@ a:focus-visible{
    --------------------------------------- */
 
 .moTable2{
-  /* Separation from the 3 cards above */
   margin-top: 28px;
   position: relative;
 
-  /* Layout */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  /* Container styling */
   border: 1px solid rgba(255,255,255,.12);
   border-radius: var(--radius-md);
   overflow: hidden;
 
-  /* Slightly lighter panel than cards */
   background:
     radial-gradient(900px 260px at 50% 0%, rgba(106,163,255,.12), transparent 65%),
     linear-gradient(180deg, rgba(255,255,255,.03), rgba(15,23,38,.55));
   box-shadow: var(--shadow-sm);
 }
 
-/* Soft top fade divider (optional but nice) */
+/* Soft top fade divider (optional) */
 .moTable2::before{
   content:"";
   position:absolute;
@@ -431,11 +426,7 @@ a:focus-visible{
   left:12%;
   right:12%;
   height:18px;
-  background: linear-gradient(
-    to bottom,
-    rgba(234,242,255,.08),
-    transparent
-  );
+  background: linear-gradient(to bottom, rgba(234,242,255,.08), transparent);
   pointer-events:none;
 }
 
@@ -448,10 +439,8 @@ a:focus-visible{
   color: rgba(234,242,255,.86);
 }
 
-/* Row 1 (KPI) – most prominent */
-.mo2Top{
-  background: rgba(255,255,255,.02);
-}
+/* Row 1 (KPI) */
+.mo2Top{ background: rgba(255,255,255,.02); }
 .mo2NoRight{ border-right: none; }
 
 .mo2Num{
@@ -461,19 +450,17 @@ a:focus-visible{
   line-height: 1.1;
   font-size: 1.05rem;
 }
-
 .mo2Lbl{
   margin-top: 4px;
   color: rgba(234,242,255,.72);
   font-size: 0.95rem;
 }
 
-/* Row 2 – de-emphasized, spans all */
+/* Row 2 spans all */
 .mo2SpanAll{
   grid-column: 1 / -1;
   border-right: none;
 }
-
 .mo2Mid{
   padding: 14px 12px;
   background: rgba(17,26,43,.18);
@@ -482,7 +469,7 @@ a:focus-visible{
   line-height: 1.6;
 }
 
-/* Row 3 – tissue block, spans all */
+/* Row 3 tissue block spans all */
 .mo2Bottom{
   border-bottom: none;
   background: rgba(17,26,43,.28);
@@ -496,6 +483,7 @@ a:focus-visible{
   margin-bottom: 10px;
 }
 
+/* Brain / CSF / Blood layout */
 .mo2TissueGrid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -503,15 +491,41 @@ a:focus-visible{
   align-items: center;
 }
 
+/* Each tissue chip: text on top, icon below */
 .mo2Tissue{
-  display: inline-flex;
-  justify-content: center;
-  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+
+  padding: 12px 10px;
   border-radius: 999px;
   border: 1px solid rgba(255,255,255,.12);
   background: rgba(15,23,38,.40);
-  color: rgba(234,242,255,.88);
+}
+
+.mo2TissueLabel{
   font-size: 0.98rem;
+  color: rgba(234,242,255,.90);
+  font-weight: 600;
+}
+
+/* Image-based tissue icons (Brain / CSF / Blood) */
+.mo2IconImg{
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  margin-top: 2px;
+
+  opacity: 0.9;
+  filter: drop-shadow(0 0 6px rgba(106,163,255,.25));
+  transition: opacity .15s ease, transform .15s ease, filter .15s ease;
+}
+
+.mo2Tissue:hover .mo2IconImg{
+  opacity: 1;
+  transform: translateY(-1px);
+  filter: drop-shadow(0 0 10px rgba(106,163,255,.45));
 }
 
 /* Responsive */
