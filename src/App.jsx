@@ -67,8 +67,17 @@ export default function App() {
 
         <Section id="science" title="Science">
           <p className="lead">
-            Andia Health technology was developed in the lab of Dr. Carlos Cruchaga at Washington University,
-            with foundational results published on side-to-side manuscripts in <i>Nature Genetics</i>
+            Andia Health technology was developed in the lab of{" "}
+            <a
+              href="https://cruchagalab.wustl.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dr. Carlos Cruchaga
+            </a>{" "}
+            at Washington University,
+            with foundational results published on side-to-side manuscripts in{" "}
+            <i>Nature Genetics</i>
             <Citation id={2} />, <i>Nature Medicine</i>
             <Citation id={3} />, and <i>Cell</i>
             <Citation id={4} />.
