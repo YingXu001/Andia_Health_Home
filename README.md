@@ -1,6 +1,6 @@
 # main_site
 
-A static site ready for GitHub Pages.
+Andia Health Main Website.
 
 <!-- ## Local development
 ```bash

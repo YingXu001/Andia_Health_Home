@@ -32,7 +32,7 @@ jobs:
       - name: Build
         run: |
           npm run build
-          # SPA 路由回退：让子路由不返回 404
+          # SPA routing fallback: avoid 404 on sub-routes
           cp dist/index.html dist/404.html
 
       - name: Upload artifact
