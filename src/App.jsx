@@ -4,6 +4,7 @@ import Section from './components/Section'
 import Card from './components/Card'
 import Footer from './components/Footer'
 import Citation from './components/Citation'
+import MultiOmicsTable from "./components/MultiOmicsTable";
 
 export default function App() {
   return (
@@ -28,6 +29,9 @@ export default function App() {
             <Card title="Target identification/Causal inference">
               Proprietary pipelines that integrate quantitative omics data with genetics with Mendelian Randomization, colocalization and LLMs to identify causal targets and for drug repositioning.
             </Card>
+          </div>
+          <div className="gridFull">
+            <MultiOmicsTable />
           </div>
         </Section>
 

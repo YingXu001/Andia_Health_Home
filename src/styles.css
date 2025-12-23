@@ -391,3 +391,140 @@ a:focus-visible{
   color: rgba(234,242,255,.70);
   font-size: 0.9rem;
 }
+
+
+
+/* ---------------------------------------
+   Scientific table-style summary
+   - Preserves the original grid alignment
+   - Fixes hierarchy + contrast on dark bg
+   - Moves "Multi-tissue" to the tissue row
+   - Adds breathing space from cards above
+   --------------------------------------- */
+
+.moTable2{
+  /* Separation from the 3 cards above */
+  margin-top: 28px;
+  position: relative;
+
+  /* Layout */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  /* Container styling */
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+
+  /* Slightly lighter panel than cards */
+  background:
+    radial-gradient(900px 260px at 50% 0%, rgba(106,163,255,.12), transparent 65%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(15,23,38,.55));
+  box-shadow: var(--shadow-sm);
+}
+
+/* Soft top fade divider (optional but nice) */
+.moTable2::before{
+  content:"";
+  position:absolute;
+  top:-18px;
+  left:12%;
+  right:12%;
+  height:18px;
+  background: linear-gradient(
+    to bottom,
+    rgba(234,242,255,.08),
+    transparent
+  );
+  pointer-events:none;
+}
+
+/* Base cell */
+.mo2Cell{
+  padding: 16px 12px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.10);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  color: rgba(234,242,255,.86);
+}
+
+/* Row 1 (KPI) – most prominent */
+.mo2Top{
+  background: rgba(255,255,255,.02);
+}
+.mo2NoRight{ border-right: none; }
+
+.mo2Num{
+  font-weight: 820;
+  letter-spacing: -0.2px;
+  color: rgba(234,242,255,.97);
+  line-height: 1.1;
+  font-size: 1.05rem;
+}
+
+.mo2Lbl{
+  margin-top: 4px;
+  color: rgba(234,242,255,.72);
+  font-size: 0.95rem;
+}
+
+/* Row 2 – de-emphasized, spans all */
+.mo2SpanAll{
+  grid-column: 1 / -1;
+  border-right: none;
+}
+
+.mo2Mid{
+  padding: 14px 12px;
+  background: rgba(17,26,43,.18);
+  color: rgba(234,242,255,.78);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* Row 3 – tissue block, spans all */
+.mo2Bottom{
+  border-bottom: none;
+  background: rgba(17,26,43,.28);
+  padding: 14px 12px 16px;
+}
+
+.mo2TissueTitle{
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: rgba(234,242,255,.92);
+  margin-bottom: 10px;
+}
+
+.mo2TissueGrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.mo2Tissue{
+  display: inline-flex;
+  justify-content: center;
+  padding: 10px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(15,23,38,.40);
+  color: rgba(234,242,255,.88);
+  font-size: 0.98rem;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .moTable2{ grid-template-columns: repeat(2, 1fr); }
+
+  /* Fix borders when KPI becomes 2x2 */
+  .moTable2 > .mo2Top:nth-child(2){ border-right: none; }
+  .moTable2 > .mo2Top:nth-child(3),
+  .moTable2 > .mo2Top:nth-child(4){
+    border-top: 1px solid rgba(255,255,255,.10);
+  }
+
+  .mo2TissueGrid{ grid-template-columns: 1fr; }
+  .mo2Tissue{ width: 100%; }
+}
