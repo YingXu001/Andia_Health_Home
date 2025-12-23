@@ -14,19 +14,18 @@ export default function App() {
         {/* <Section id="about" title="About Main Site"> */}
         <Section id="about" title="About Andia Health">
           <p className="lead">
-            We integrate <strong>multi-omics</strong> with <strong>artificial intelligence</strong> to advance
-            biomarker discovery, early risk stratification, and clinical decision support — with scientific rigor
-            and engineering excellence.
+            Andia Health combines <strong>multi-tissue multi-omics</strong> with its own <strong>AI agents and frameworks</strong> for precision
+            Neurology-accelerating the identification of novel biomarkers, disease subtyping, patient stratification and target identification.
           </p>
           <div className="grid">
             <Card title="Multi-omics Integration">
-              Cross-layer integration across genomics, transcriptomics, proteomics, metabolomics, and clinical phenotypes.
+              Cross-layer integration across genomics, transcriptomics, proteomics, metabolomics, across tissues and platforms with clinical phenotypes. Our science is built on the largest proteomic, metabolomics and transcriptomics datasets.
             </Card>
             <Card title="Explainable AI">
-              Robust learning and causal reasoning to improve generalization and interpretability for research and clinical use.
+              Robust learning and causal reasoning to improve generalization and interpretability for research and clinical use. Our current agent AI and platform have been implemented in proteomic data to identify a protein panel that can quantify brain co-pathologies across the four major neurodegenerative diseases (Alzheimer’s, Parkinson, FTD and DLB) (REF)
             </Card>
             <Card title="Validation by Design">
-              Multi-cohort cross-validation, fixed/random-effects meta-analysis, and multiple testing control (e.g., BH).
+              Proprietary pipelines that integrate quantitative omics data with genetics with Mendelian Randomization, colocalization and LLMs to identify causal targets and for drug repositioning.
             </Card>
           </div>
         </Section>
