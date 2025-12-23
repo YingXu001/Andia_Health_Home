@@ -1,121 +1,393 @@
+/* ==========================================================================
+   Andia Health — AI4Health Startup Theme (Dark, research-grade)
+   - Cohesive typography + spacing
+   - Subtle glassy nav + gradient hero
+   - Elevated cards with restrained glow
+   - Reference/citation system optimized for dark backgrounds
+   - Data panel styling for numeric summaries
+   ========================================================================== */
+
+/* -----------------------------
+   1) Design Tokens (CSS Variables)
+   ----------------------------- */
 :root{
-  --bg:#0b1220;
-  --panel:#111a2b;
-  --muted:#7c8aaa;
-  --text:#eaf2ff;
-  --brand:#6aa3ff;
-  --brand-2:#9b7cff;
-  --ring:rgba(106,163,255,.35);
-  --card:#0f1726;
+  /* Core colors */
+  --bg:#0b1220;                 /* Page background base */
+  --panel:#111a2b;              /* Dark panel background */
+  --card:#0f1726;               /* Card base */
+  --text:#eaf2ff;               /* Primary text */
+  --text-2: rgba(234,242,255,.88); /* Secondary text (body copy) */
+  --muted:#7c8aaa;              /* Muted text (nav/subtitle) */
+  --muted-2: rgba(234,242,255,.72);/* Muted-on-dark (fine print) */
+
+  /* Brand accents */
+  --brand:#6aa3ff;              /* Primary accent */
+  --brand-2:#9b7cff;            /* Secondary accent */
+  --ring:rgba(106,163,255,.35); /* Focus ring */
+
+  /* Borders */
   --border:rgba(255,255,255,.08);
-  --max:1120px;
+  --border-2: rgba(255,255,255,.12);
+  --border-3: rgba(255,255,255,.18);
+
+  /* Shadows / glow */
+  --shadow-sm: 0 6px 18px rgba(0,0,0,.22);
+  --shadow-md: 0 14px 48px rgba(0,0,0,.35);
+  --glow: 0 0 0 1px rgba(106,163,255,.10), 0 0 40px rgba(106,163,255,.12);
+
+  /* Radius */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+
+  /* Layout */
+  --max:1120px;                 /* Content max width */
 }
 
-*{box-sizing:border-box}
-html,body,#root{height:100%}
+/* -----------------------------
+   2) Global Reset + Typography
+   ----------------------------- */
+*{ box-sizing:border-box; }
+html, body, #root{ height:100%; }
+
 body{
   margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: radial-gradient(1200px 600px at 80% -10%, rgba(155,124,255,.2), transparent),
-              radial-gradient(1200px 600px at 10% -10%, rgba(106,163,255,.2), transparent),
-              var(--bg);
-  color:var(--text);
-  line-height:1.6;
-}
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+               "Apple Color Emoji","Segoe UI Emoji";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  letter-spacing: 0.1px;
 
-a{ color:var(--brand); text-decoration:none }
-a:hover{ text-decoration:underline }
-
-.container{
-  max-width:var(--max);
-  margin:0 auto;
-  padding:0 20px;
-}
-
-.nav{
-  position:sticky;top:0;z-index:10;
-  backdrop-filter: blur(8px);
-  background: rgba(11,18,32,.6);
-  border-bottom:1px solid var(--border);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:10px 16px;
-}
-.nav .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text)}
-.nav nav{display:flex;gap:16px;flex-wrap:wrap}
-.nav nav a{color:var(--muted)}
-.nav nav a:hover{color:var(--text)}
-
-.hero{
-  padding:96px 20px 64px;
+  /* Background: subtle brand aurora + base */
   background:
-    radial-gradient(600px 240px at 50% 0, rgba(106,163,255,.25), transparent);
-  border-bottom:1px solid var(--border);
+    radial-gradient(1200px 600px at 80% -10%, rgba(155,124,255,.20), transparent),
+    radial-gradient(1200px 600px at 10%  -10%, rgba(106,163,255,.20), transparent),
+    var(--bg);
+
+  color: var(--text);
+  line-height: 1.65;
 }
+
+p{ color: var(--text-2); margin: 0 0 12px; }
+strong{ color: rgba(234,242,255,.96); }
+
+/* Links: consistent, modern, and accessible */
+a{
+  color: var(--brand);
+  text-decoration: none;
+  transition: color .15s ease, opacity .15s ease, border-color .15s ease;
+}
+a:hover{ color:#ffffff; }
+a:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 4px var(--ring);
+  border-radius: 6px;
+}
+
+/* -----------------------------
+   3) Layout Container
+   ----------------------------- */
+.container{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* -----------------------------
+   4) Navigation (glassy, sticky)
+   ----------------------------- */
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  backdrop-filter: blur(10px);
+  background: rgba(11,18,32,.55);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 10px 16px;
+}
+
+.nav .brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight: 750;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+
+.nav nav{
+  display:flex;
+  gap:16px;
+  flex-wrap:wrap;
+}
+
+.nav nav a{
+  color: var(--muted);
+  transition: color .15s ease, opacity .15s ease;
+}
+.nav nav a:hover{
+  color: var(--text);
+}
+
+/* -----------------------------
+   5) Hero
+   ----------------------------- */
+.hero{
+  padding: 96px 20px 64px;
+  background:
+    radial-gradient(700px 260px at 50% 0, rgba(106,163,255,.22), transparent),
+    radial-gradient(900px 360px at 20% 10%, rgba(155,124,255,.14), transparent);
+  border-bottom: 1px solid var(--border);
+}
+
 .hero-inner{
-  max-width:var(--max);
-  margin:0 auto;
-  text-align:center;
+  max-width: var(--max);
+  margin: 0 auto;
+  text-align: center;
 }
-.hero h1{font-size:42px;line-height:1.15;margin:0 0 12px}
-.subtitle{color:var(--muted);font-size:18px;margin:0 auto 24px;max-width:720px}
-.cta{display:flex;gap:12px;justify-content:center}
+
+.hero h1{
+  font-size: 42px;
+  line-height: 1.12;
+  margin: 0 0 12px;
+  font-weight: 780;
+  letter-spacing: -0.6px;
+}
+
+.subtitle{
+  color: rgba(234,242,255,.68);
+  font-size: 18px;
+  margin: 0 auto 24px;
+  max-width: 720px;
+}
+
+/* Call-to-action buttons */
+.cta{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap: wrap;
+}
+
 .btn{
-  display:inline-block;padding:10px 16px;border:1px solid var(--border);border-radius:10px;
-  background:transparent;color:var(--text);
+  display:inline-block;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease, background .12s ease;
 }
 .btn.primary{
-  background:linear-gradient(135deg, var(--brand), var(--brand-2));
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
   border: none;
 }
-.btn:hover{filter:brightness(1.05);text-decoration:none}
+.btn:hover{
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+  filter: brightness(1.06);
+  text-decoration:none;
+}
+.btn:active{
+  transform: translateY(0);
+  filter: brightness(1.02);
+}
+.btn:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 4px var(--ring), var(--shadow-sm);
+}
 
-.section{padding:56px 0;border-bottom:1px solid var(--border)}
-.section-title{font-size:28px;margin:0 0 18px}
-.lead{font-size:18px;color:var(--text)}
+/* -----------------------------
+   6) Sections + Typography
+   ----------------------------- */
+.section{
+  padding: 64px 0;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.section-title{
+  font-size: 28px;
+  margin: 0 0 18px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+  color: var(--text);
+}
+
+.lead{
+  font-size: 18px;
+  color: rgba(234,242,255,.90);
+  margin: 0 0 16px;
+}
+
+/* -----------------------------
+   7) Grid System
+   ----------------------------- */
 .grid{
-  display:grid;gap:16px;
+  display:grid;
+  gap:16px;
   grid-template-columns: repeat(3, 1fr);
 }
-.grid.two{grid-template-columns: repeat(2, 1fr);}
-.grid.three{grid-template-columns: repeat(3, 1fr);}
+
+.grid.two{ grid-template-columns: repeat(2, 1fr); }
+.grid.three{ grid-template-columns: repeat(3, 1fr); }
+
 @media (max-width:900px){
-  .grid, .grid.two, .grid.three{grid-template-columns:1fr}
+  .grid, .grid.two, .grid.three{ grid-template-columns: 1fr; }
+  .hero{ padding: 72px 20px 52px; }
+  .hero h1{ font-size: 36px; }
 }
 
+/* -----------------------------
+   8) Cards (research-grade, subtle glow)
+   ----------------------------- */
 .card{
-  background: linear-gradient(180deg, rgba(255,255,255,.02), transparent), var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;padding:18px;
-  box-shadow: 0 0 0 1px rgba(106,163,255,.05), 0 6px 32px rgba(0,0,0,.25);
-}
-.card-title{margin:0 0 8px;font-size:18px}
-.card-body{margin:0;color:#cfe2ff}
-
-.list{ padding-left: 18px; color:#cfe2ff }
-
-.footer{
-  padding:28px 16px;text-align:center;color:var(--muted)
-}
-.footer .meta{margin:6px 0 0}
-
-.citation-hover {
   position: relative;
-  cursor: pointer;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-2);
+
+  /* Layered background for depth */
+  background:
+    radial-gradient(1200px 300px at 30% 0%, rgba(106,163,255,.10), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,.03), transparent 45%),
+    var(--card);
+
+  box-shadow: var(--shadow-sm);
+  padding: 18px;
+  transition: transform .14s ease, border-color .14s ease, box-shadow .14s ease;
 }
 
-.citation-hover .tooltip {
-  display: none;
-  position: absolute;
-  background: #222;
-  color: #fff;
-  padding: 8px;
-  border-radius: 4px;
-  width: 260px;
-  top: 1.5em;
-  left: 0;
-  z-index: 10;
+.card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(255,255,255,.16);
+  box-shadow: var(--shadow-md), var(--glow);
 }
 
-.citation-hover:hover .tooltip {
-  display: block;
+.card-title{
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 680;
+  letter-spacing: -0.2px;
+  color: rgba(234,242,255,.96);
+}
+
+.card-body{
+  margin: 0;
+  color: rgba(234,242,255,.80);
+}
+
+/* Lists in dark cards/sections */
+.list{
+  padding-left: 18px;
+  color: rgba(234,242,255,.82);
+}
+
+/* -----------------------------
+   9) Footer
+   ----------------------------- */
+.footer{
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--muted);
+}
+.footer .meta{ margin: 6px 0 0; }
+
+/* ==========================================================================
+   10) Citations + References (dark-background optimized)
+   ========================================================================== */
+
+/* Inline citation marker (e.g., [1]) */
+.citation{
+  color: rgba(234,242,255,.72);
+  font-weight: 550;
+  margin-left: 2px;
+  text-decoration: none;
+}
+.citation:hover{
+  color: #ffffff;
+  text-decoration: underline;
+}
+.citation:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px var(--ring);
+  border-radius: 6px;
+}
+
+/* Reference panel: styled like a "paper appendix" */
+.references{
+  margin-top: 10px;
+  padding: 16px 18px;
+
+  background: rgba(17,26,43,.45);
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius-sm);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,.22);
+
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: rgba(234,242,255,.86);
+}
+
+.references ol{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.references li{
+  margin-bottom: .8rem;
+  color: rgba(234,242,255,.82);
+}
+
+/* Reference links (DOI, preprints, etc.) */
+.references a{
+  color: rgba(127,179,255,.92); /* soft scientific blue */
+  border-bottom: 1px solid rgba(127,179,255,.35);
+  text-decoration: none;
+}
+.references a:hover{
+  color: #ffffff;
+  border-bottom-color: rgba(255,255,255,.75);
+}
+
+/* ==========================================================================
+   11) Data Panel (numeric summary / "table-like" blocks)
+   ========================================================================== */
+.dataPanel{
+  margin-top: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: var(--radius-sm);
+  background: rgba(15,23,38,.65);
+  overflow: hidden;
+}
+
+.dataPanel .row{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.dataPanel .cell{
+  padding: 12px 10px;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.08);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  color: rgba(234,242,255,.80);
+}
+
+.dataPanel .cell:last-child{ border-right: none; }
+
+/* Optional: make key numbers pop slightly (if you wrap with <div class="big">) */
+.dataPanel .big{
+  font-weight: 750;
+  letter-spacing: -0.2px;
+  color: rgba(234,242,255,.95);
+}
+.dataPanel .small{
+  color: rgba(234,242,255,.70);
+  font-size: 0.9rem;
 }
