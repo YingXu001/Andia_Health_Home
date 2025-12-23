@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import Section from './components/Section'
 import Card from './components/Card'
 import Footer from './components/Footer'
+import Citation from './components/Citation'
 
 export default function App() {
   return (
@@ -22,7 +23,7 @@ export default function App() {
               Cross-layer integration across genomics, transcriptomics, proteomics, metabolomics, across tissues and platforms with clinical phenotypes. Our science is built on the largest proteomic, metabolomics and transcriptomics datasets.
             </Card>
             <Card title="Explainable AI">
-              Robust learning and causal reasoning to improve generalization and interpretability for research and clinical use. Our current agent AI and platform have been implemented in proteomic data to identify a protein panel that can quantify brain co-pathologies across the four major neurodegenerative diseases (Alzheimer’s, Parkinson, FTD and DLB) (REF)
+              Robust learning and causal reasoning to improve generalization and interpretability for research and clinical use. Our current agent AI and platform have been implemented in proteomic data to identify a protein panel that can quantify brain co-pathologies across the four major neurodegenerative diseases (Alzheimer’s, Parkinson's, Frontotemporal Dementia (FTD), and Dementia with Lewy bodies (DLB)) <Citation id={1} />
             </Card>
             <Card title="Validation by Design">
               Proprietary pipelines that integrate quantitative omics data with genetics with Mendelian Randomization, colocalization and LLMs to identify causal targets and for drug repositioning.
@@ -67,6 +68,28 @@ export default function App() {
             Location: Global / Remote
           </p>
         </Section>
+
+        <Section id="references" title="References">
+          <ol className="references">
+            <li id="ref-1">
+              Xu Y, Western D, Heo G, <i>et&nbsp;al.</i>{" "}
+              <strong>
+                Protein-based diagnosis and analysis of co-pathologies across neurodegenerative diseases:
+                large-scale AI-boosted CSF and plasma classification.
+              </strong>{" "}
+              <i>medRxiv</i>. 2025; doi:&nbsp;
+              <a
+                href="https://doi.org/10.1101/2025.07.09.25331192"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                10.1101/2025.07.09.25331192
+              </a>
+              .
+            </li>
+          </ol>
+        </Section>
+
 
       </main>
 
