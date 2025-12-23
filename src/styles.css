@@ -240,6 +240,11 @@ a:focus-visible{
   grid-template-columns: repeat(3, 1fr);
 }
 
+.grid.one {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
 .grid.two{ grid-template-columns: repeat(2, 1fr); }
 .grid.three{ grid-template-columns: repeat(3, 1fr); }
 

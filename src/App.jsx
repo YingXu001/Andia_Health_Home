@@ -83,15 +83,71 @@ export default function App() {
           </p>
         </Section>
 
-        <Section id="solutions" title="Products and Solutions">
-          <div className="grid three">
-            <Card title="Early Screening">Fluid-biomarker–based risk prediction and stratification.</Card>
-            <Card title="Clinical Trials">
-              Enrollment/stratification optimization and surrogate endpoint exploration.
+        <Section id="products" title="Products and Solutions">
+          <p>
+            At Andia Health, we harness the power of human multi-omics and artificial intelligence
+            to deliver actionable and scalable solutions for precision medicine, with a primary
+            focus on neurological diseases and traits.
+          </p>
+
+          <div className="grid one" style={{ marginTop: "2rem" }}>
+            <Card title="GPND-AI (Generalizable Protein-based Neurodegenerative Disease AI)">
+              <p>
+                Early and accurate diagnosis of neurodegenerative diseases remains challenging,
+                particularly in individuals with mixed or co-existing pathologies.
+                GPND-AI is a novel, platform-agnostic AI framework that can be applied to diverse
+                omic data types to identify informative features and develop predictive models
+                for complex neurodegenerative diseases.
+              </p>
+
+              <p>
+                The GPND-AI agent was trained on more than 20,000 samples and demonstrated
+                strong multi-disease diagnostic performance, achieving AUC &gt; 0.90 across
+                Alzheimer’s disease, Parkinson’s disease, dementia with Lewy bodies, and
+                frontotemporal dementia.
+              </p>
+
+              <p>
+                Importantly, GPND-AI enables quantitative assessment of pathology and
+                co-pathology—including amyloid plaques, tau tangles, α-synuclein, and TDP-43—
+                outperforming current single-analyte blood-based biomarkers.
+              </p>
+
+              <p>
+                These findings were replicated across multiple independent cohorts, including
+                GNPC, ROSMAP, and Stanford-ADRC, and are compatible with multiple proteomic
+                platforms such as SomaLogic, Olink, and Alamar.
+              </p>
+
+              <p>
+                In summary, GPND-AI delivers a clinically relevant, deployable protein panel
+                with high diagnostic accuracy, cross-site reproducibility, and robust
+                platform-agnostic performance validated in retrospective and external datasets.
+              </p>
             </Card>
-            <Card title="Target Discovery">From molecules to pathways for mechanism hypotheses and prioritization.</Card>
+          </div>
+
+          <div className="grid three" style={{ marginTop: "2.5rem" }}>
+            <Card title="Unified AI/ML Framework for Multi-platform Biomarker Discovery">
+              A unified and scalable AI/ML infrastructure enabling biomarker discovery,
+              model transferability, and harmonized analytics across SomaLogic, Olink,
+              Alamar/NuLISA, and emerging proteomic platforms.
+            </Card>
+
+            <Card title="Target Discovery & Patient Stratification">
+              AI-driven patient stratification and disease subtyping to support
+              precision clinical trials, disease progression modeling, and
+              biologically informed cohort enrichment.
+            </Card>
+
+            <Card title="Target Identification & Causal Inference">
+              Integrative multi-omic and causal inference frameworks for identifying
+              disease-driving targets and pathways, supporting therapeutic target
+              validation and translational research.
+            </Card>
           </div>
         </Section>
+
 
         <Section id="roadmap" title="Roadmap">
           <RoadmapTable />
