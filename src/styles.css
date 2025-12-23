@@ -42,6 +42,12 @@
 
   /* Layout */
   --max:1120px;                 /* Content max width */
+
+  /* Pipeline-specific tones */
+  --pipe-filled: rgba(106,163,255,.35);   /* brand blue, visible but not loud */
+  --pipe-filled-strong: rgba(106,163,255,.55);
+  --pipe-empty: rgba(255,255,255,.04);
+  --pipe-border: rgba(255,255,255,.10);
 }
 
 /* -----------------------------
@@ -541,4 +547,157 @@ a:focus-visible{
 
   .mo2TissueGrid{ grid-template-columns: 1fr; }
   .mo2Tissue{ width: 100%; }
+}
+
+
+
+/* ---------------------------------------
+   Pipeline matrix (dark biotech style)
+   --------------------------------------- */
+
+.pipeWrap{
+  margin-top: 8px;
+}
+
+.pipeHeader{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+
+.pipeTitle{
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: -0.2px;
+}
+
+.pipeNote{
+  margin: 0;
+  color: rgba(234,242,255,.72);
+  font-size: 0.95rem;
+}
+
+/* Allows horizontal scroll on small screens */
+.pipeScroll{
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+/* The table body (min-width keeps columns readable) */
+.pipeTable{
+  min-width: 860px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background:
+    radial-gradient(900px 280px at 50% 0%, rgba(106,163,255,.10), transparent 65%),
+    linear-gradient(180deg, rgba(255,255,255,.03), rgba(15,23,38,.50));
+  box-shadow: var(--shadow-sm);
+}
+
+/* Grid rows */
+.pipeRow{
+  display: grid;
+  grid-template-columns: 3.3fr repeat(4, 1fr);
+}
+
+/* Cells */
+.pipeCell{
+  border-right: 1px solid rgba(255,255,255,.10);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  padding: 14px 14px;
+}
+
+.pipeRow .pipeCell:last-child{
+  border-right: none;
+}
+
+/* Header row */
+.pipeRowHead .pipeCell{
+  padding: 12px 14px;
+  background: rgba(255,255,255,.02);
+}
+
+.pipeHeadLeft{
+  color: rgba(234,242,255,.72);
+}
+
+.pipeHead{
+  font-weight: 700;
+  color: rgba(234,242,255,.90);
+  text-align: center;
+}
+
+/* Left column project text */
+.pipeLeft{
+  background: rgba(17,26,43,.20);
+}
+
+.pipeProjTitle{
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  color: rgba(234,242,255,.95);
+  line-height: 1.2;
+}
+
+.pipeProjSub{
+  margin-top: 4px;
+  color: rgba(234,242,255,.70);
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+/* Stage cells */
+.pipeStage{
+  background: var(--pipe-empty);
+}
+
+
+/* Filled blocks (match your screenshot, but nicer) */
+.pipeStage.isFilled{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.14),
+      rgba(255,255,255,.02) 55%,
+      transparent
+    ),
+    var(--pipe-filled);
+  box-shadow:
+    inset 0 0 0 1px var(--pipe-border),
+    0 0 12px rgba(106,163,255,.22);
+}
+
+
+
+/* Subtle hover cue */
+.pipeRow:hover .pipeStage{
+  background: rgba(255,255,255,.02);
+}
+.pipeRow:hover .pipeStage.isFilled{
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.14),
+      transparent 60%
+    ),
+    var(--pipe-filled-strong);
+}
+
+/* Remove last bottom border */
+.pipeTable .pipeRow:last-child .pipeCell{
+  border-bottom: none;
+}
+
+/* Mobile: tighten left column a bit */
+@media (max-width: 900px){
+  .pipeHeader{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .pipeNote{
+    font-size: 0.9rem;
+  }
 }

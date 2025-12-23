@@ -5,6 +5,8 @@ import Card from "./components/Card"
 import Footer from "./components/Footer"
 import Citation from "./components/Citation"
 import MultiOmicsTable from "./components/MultiOmicsTable"
+import PipelineTable from "./components/PipelineTable"
+
 
 export default function App() {
   return (
@@ -91,6 +93,10 @@ export default function App() {
           </div>
         </Section>
 
+        <Section id="pipeline" title="Pipeline">
+          <PipelineTable />
+        </Section>
+
         <Section id="team" title="Team">
           <p>
             We bring together expertise in computational biology, neuroscience, software engineering,
@@ -114,7 +120,7 @@ export default function App() {
             For technical and AI-related inquiries, please contact Fiona (Ying) Xu.
           </p>
           <p>
-            Carlos Cruchaga:{" "}
+            Dr. Carlos Cruchaga:{" "}
             <a href="mailto:cruchagac@wustl.edu">cruchagac@wustl.edu</a>
             <br />
             Fiona (Ying) Xu:{" "}
