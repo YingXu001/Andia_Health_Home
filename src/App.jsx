@@ -5,7 +5,7 @@ import Card from "./components/Card"
 import Footer from "./components/Footer"
 import Citation from "./components/Citation"
 import MultiOmicsTable from "./components/MultiOmicsTable"
-import PipelineTable from "./components/PipelineTable"
+import RoadmapTable from "./components/RoadmapTable"
 
 
 export default function App() {
@@ -93,8 +93,8 @@ export default function App() {
           </div>
         </Section>
 
-        <Section id="pipeline" title="Pipeline">
-          <PipelineTable />
+        <Section id="roadmap" title="Roadmap">
+          <RoadmapTable />
         </Section>
 
         <Section id="team" title="Team">

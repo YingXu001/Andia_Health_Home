@@ -1,8 +1,6 @@
-export default function PipelineTable() {
+export default function RoadmapTable() {
   const stages = ["Preclinical", "Replication", "Validation", "Launch"]
 
-  // Fill map: which stages are filled (like your screenshot)
-  // You can adjust these booleans anytime.
   const rows = [
     {
       title: "GPND-AI for Neurological diseases",
@@ -32,18 +30,16 @@ export default function PipelineTable() {
   ]
 
   return (
-    <div className="pipeWrap" aria-label="Our pipeline">
+    <div className="pipeWrap" aria-label="Our roadmap">
       <div className="pipeHeader">
-        <h2 className="pipeTitle">Our Pipeline</h2>
+        <h2 className="pipeTitle">Our Roadmap</h2>
         <p className="pipeNote">
-          Development stages are shown as filled blocks (current or completed).
+          Development milestones are shown as filled blocks (current or completed).
         </p>
       </div>
 
-      {/* scroll container for small screens */}
-      <div className="pipeScroll" role="region" aria-label="Pipeline stage table">
+      <div className="pipeScroll" role="region" aria-label="Roadmap stage table">
         <div className="pipeTable">
-          {/* header row */}
           <div className="pipeRow pipeRowHead">
             <div className="pipeCell pipeLeft pipeHeadLeft" />
             {stages.map((s) => (
@@ -53,7 +49,6 @@ export default function PipelineTable() {
             ))}
           </div>
 
-          {/* data rows */}
           {rows.map((r) => (
             <div key={r.title} className="pipeRow">
               <div className="pipeCell pipeLeft">
@@ -67,7 +62,9 @@ export default function PipelineTable() {
                   <div
                     key={s}
                     className={`pipeCell pipeStage ${isFilled ? "isFilled" : ""}`}
-                    aria-label={`${r.title} — ${s}: ${isFilled ? "active" : "not active"}`}
+                    aria-label={`${r.title} — ${s} milestone: ${
+                      isFilled ? "active" : "planned"
+                    }`}
                   />
                 )
               })}
