@@ -4,7 +4,7 @@ export default function RoadmapTable() {
   const rows = [
     {
       title: "GPND-AI for Neurological diseases",
-      subtitle: "Somalogic and Olink-based",
+      subtitle: "Multi-platform supports: Somalogic-, Alamar- and Olink-based",
       filled: { Preclinical: true, Replication: true, Validation: true, Launch: false },
     },
     {

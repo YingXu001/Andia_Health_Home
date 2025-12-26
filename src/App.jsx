@@ -162,7 +162,7 @@ export default function App() {
           <RoadmapTable />
         </Section>
 
-        <Section id="team" title="Team">
+        <Section id="team" title="Team Core">
           <p>
             We bring together expertise in computational biology, neuroscience, software engineering,
             and artificial intelligence.
@@ -182,7 +182,7 @@ export default function App() {
         <Section id="contact" title="Contact">
           <p>
             For research collaborations and business partnerships, please contact Dr. Carlos Cruchaga.
-            For technical and AI-related inquiries, please contact Fiona (Ying) Xu.
+            For technical and AI-related inquiries, please contact Fiona Xu.
           </p>
           <p>
             Dr. Carlos Cruchaga:{" "}
@@ -215,11 +215,11 @@ export default function App() {
             </li>
 
             <li id="ref-2">
-              Western D, Timsina J, Wang L, <i>et al.</i>
+              Western D, Timsina J, Wang L, <i>et&nbsp;al.</i>{" "}
               <strong>
                 Proteogenomic analysis of human cerebrospinal fluid identifies neurologically relevant regulation
                 and implicates causal proteins for Alzheimer’s disease.
-              </strong>
+              </strong>{" "}
               <i>Nature Genetics</i>. 2024;56:2672–2684.
               <a href="https://doi.org/10.1038/s41588-024-01972-8" target="_blank" rel="noopener noreferrer">
                 https://doi.org/10.1038/s41588-024-01972-8
@@ -227,11 +227,11 @@ export default function App() {
             </li>
 
             <li id="ref-3">
-              Ali M, Erabadda B, Chen Y, <i>et al.</i>
+              Ali M, Erabadda B, Chen Y, <i>et&nbsp;al.</i>{" "}
               <strong>
                 Shared and disease-specific pathways in frontotemporal dementia and Alzheimer’s and Parkinson’s
                 diseases.
-              </strong>
+              </strong>{" "}
               <i>Nature Medicine</i>. 2025;31:2567–2577.
               <a href="https://doi.org/10.1038/s41591-025-03833-1" target="_blank" rel="noopener noreferrer">
                 https://doi.org/10.1038/s41591-025-03833-1
@@ -239,10 +239,10 @@ export default function App() {
             </li>
 
             <li id="ref-4">
-              Shen Y, Timsina J, Heo G, <i>et al.</i>
+              Shen Y, Timsina J, Heo G, <i>et&nbsp;al.</i>{" "}
               <strong>
                 CSF proteomics identifies early changes in autosomal dominant Alzheimer’s disease.
-              </strong>
+              </strong>{" "}
               <i>Cell</i>. 2024;187:6309–6326.e15.
               <a href="https://doi.org/10.1016/j.cell.2024.08.049" target="_blank" rel="noopener noreferrer">
                 https://doi.org/10.1016/j.cell.2024.08.049
