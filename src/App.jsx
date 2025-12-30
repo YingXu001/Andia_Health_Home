@@ -169,11 +169,11 @@ export default function App() {
           </p>
           <ul className="list">
             <li>
-              CEO & Scientific Lead — Dr. Carlos Cruchaga  
+              Co-founder, CEO & Scientific Lead — Dr. Carlos Cruchaga  
               <span style={{ opacity: 0.75 }}> (research collaborations & partnerships)</span>
             </li>
             <li>
-              CSO & Head of AI — Fiona (Ying) Xu  
+              Co-founder — Fiona (Ying) Xu  
               <span style={{ opacity: 0.75 }}> (AI, modeling, and technology)</span>
             </li>
           </ul>
@@ -182,7 +182,6 @@ export default function App() {
         <Section id="contact" title="Contact">
           <p>
             For research collaborations and business partnerships, please contact Dr. Carlos Cruchaga.
-            For technical and AI-related inquiries, please contact Fiona Xu.
           </p>
           <p>
             Dr. Carlos Cruchaga:{" "}
