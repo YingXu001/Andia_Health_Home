@@ -181,18 +181,29 @@ export default function App() {
 
         <Section id="contact" title="Contact">
           <p>
-            For research collaborations and business partnerships, please contact Dr. Carlos Cruchaga.
+            For general inquiries, please email{" "}
+            <a href="mailto:info@andia.health">info@andia.health</a>.
+            <br />
+            For research collaborations and business partnerships, please contact{" "}
+            <a href="mailto:customer@andia.health">customer@andia.health</a>.
+            <br />
+            For technical support, please reach out to{" "}
+            <a href="mailto:support@andia.health">support@andia.health</a>.
           </p>
+
           <p>
+            <strong>Key Contacts</strong>
+            <br />
             Dr. Carlos Cruchaga:{" "}
-            <a href="mailto:cruchagac@wustl.edu">cruchagac@wustl.edu</a>
+            <a href="mailto:cruchagac@andia.health">cruchagac@andia.health</a>
             <br />
-            Fiona (Ying) Xu:{" "}
-            <a href="mailto:x.ying1@wustl.edu">x.ying1@wustl.edu</a>
+            Fiona Xu:{" "}
+            <a href="mailto:xufiona@andia.health">xufiona@andia.health</a>
             <br />
-            Location: Global / Remote
+            <em>Location:</em> Global / Remote
           </p>
         </Section>
+
 
         <Section id="references" title="References">
           <ol className="references">
