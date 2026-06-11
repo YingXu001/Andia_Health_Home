@@ -169,36 +169,19 @@ export default function App() {
           </p>
           <ul className="list">
             <li>
-              Co-founder, CEO & Scientific Lead — Dr. Carlos Cruchaga  
+              Founder, CEO — Dr. Carlos Cruchaga  
               <span style={{ opacity: 0.75 }}> (research collaborations & partnerships)</span>
-            </li>
-            <li>
-              Co-founder — Fiona (Ying) Xu  
-              <span style={{ opacity: 0.75 }}> (AI, modeling, and technology)</span>
             </li>
           </ul>
         </Section>
 
         <Section id="contact" title="Contact">
-          <p>
-            For general inquiries, please email{" "}
-            <a href="mailto:info@andia.health">info@andia.health</a>.
-            <br />
-            For research collaborations and business partnerships, please contact{" "}
-            <a href="mailto:customer@andia.health">customer@andia.health</a>.
-            <br />
-            For technical support, please reach out to{" "}
-            <a href="mailto:support@andia.health">support@andia.health</a>.
-          </p>
 
           <p>
             <strong>Key Contacts</strong>
             <br />
             Dr. Carlos Cruchaga:{" "}
             <a href="mailto:cruchagac@andia.health">cruchagac@andia.health</a>
-            <br />
-            Fiona Xu:{" "}
-            <a href="mailto:xufiona@andia.health">xufiona@andia.health</a>
             <br />
             <em>Location:</em> Global / Remote
           </p>
