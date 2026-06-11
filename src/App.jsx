@@ -87,8 +87,7 @@ export default function App() {
             Our GPND-AI (AI-based Generalizable Protein-based Neurodegenerative Diseases) model has been
             validated in over 40,000 samples from the Global Neurodegeneration Proteomics Consortium and UK
             Biobank and shows that it can accurately identify individuals with Alzheimer’s disease,
-            Parkinson’s disease, FTD, or DLB even before clinical symptoms
-            <Citation id={1} />.
+            Parkinson’s disease, FTD, or DLB even before clinical symptoms <Citation id={1} /><Citation id={5} />.
           </p>
         </Section>
 
@@ -164,8 +163,7 @@ export default function App() {
 
         <Section id="team" title="Team Core">
           <p>
-            We bring together expertise in computational biology, neuroscience, software engineering,
-            and artificial intelligence.
+            We bring together expertise in computational biology, neuroscience.
           </p>
           <ul className="list">
             <li>
@@ -240,6 +238,23 @@ export default function App() {
               <a href="https://doi.org/10.1016/j.cell.2024.08.049" target="_blank" rel="noopener noreferrer">
                 https://doi.org/10.1016/j.cell.2024.08.049
               </a>
+            </li>
+
+            <li id="ref-5">
+              Xu Y, Denkinger MN, Liu M, <i>et&nbsp;al.</i>{" "}
+              <strong>
+                GPND-AI NULISA: A 15-protein AI classifier for diagnosis and co-pathology
+                profiling across neurodegenerative diseases.
+              </strong>{" "}
+              <i>Alzheimer&apos;s &amp; Dementia</i>. 2026;22(5):e71420. doi:&nbsp;
+              <a
+                href="https://doi.org/10.1002/alz.71420"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                10.1002/alz.71420
+              </a>
+              .
             </li>
 
           </ol>
